@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Canales de YouTube - Empresa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EAE0D5;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #0A0908;
+            text-align: center;
+        }
+        table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #C6AC8F;
+            text-align: center;
+        }
+        th {
+            background-color: #22333B;
+            color: #EAE0D5;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canales de YouTube </h1>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Suscriptores</th>
+            <th>Categoría</th>
+        </tr>
+        {% for canal in canales %}
+        <tr>
+            <td>{{ canal.nombre }}</td>
+            <td>{{ canal.suscriptores }}</td>
+            <td>{{ canal.categoria }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
